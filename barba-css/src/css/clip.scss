@@ -1,1 +1,28 @@
 /* Clip-path transition */
+// animating the opacity of the page leaving:
+.clip-leave {
+    opacity: 1;
+}
+.clip-leave-active {
+    transition: all 0.75s linear;
+}
+.clip-leave-to {
+    opacity: 0;
+}
+
+
+// clipping the new page
+.clip-enter {
+    clip-path: circle(0%);
+}
+.clip-enter-active {
+    transition: all 0.75s linear;
+    // this next set of properties is to position the page
+    // over the previous one 
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+.clip-enter-to {
+    clip-path: circle(75%);
+}
